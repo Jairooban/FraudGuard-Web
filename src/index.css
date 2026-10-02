@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased transition-colors duration-200;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(18, 26, 48, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.8);
+}
+
+/* Dark theme default */
+html.dark body {
+  background-color: #0B1020;
+  color: #F8FAFC;
+}
+
+/* Light theme overrides when html has class 'light' */
+html.light body {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+
+/* Background overrides in Light Mode */
+html.light .bg-navy-950 {
+  background-color: #E2E8F0 !important;
+}
+
+html.light .bg-navy-900 {
+  background-color: #F8FAFC !important;
+}
+
+html.light .bg-navy-850 {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-navy-800 {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Border overrides in Light Mode */
+html.light .border-navy-700 {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .border-navy-800 {
+  border-color: #CBD5E1 !important;
+}
+
+/* Text overrides in Light Mode */
+html.light .text-slate-100 {
+  color: #0F172A !important;
+}
+
+html.light .text-slate-200 {
+  color: #1E293B !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748B !important;
+}
+
+html.light .text-slate-500 {
+  color: #94A3B8 !important;
+}
+
+/* Hover and active states in Light Mode */
+html.light .hover\:bg-navy-700:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .hover\:bg-navy-800:hover {
+  background-color: #F8FAFC !important;
+}
+
+html.light .hover\:border-slate-700:hover,
+html.light .hover\:border-slate-600:hover {
+  border-color: #CBD5E1 !important;
+}
+
+/* Table header & row styling in Light Mode */
+html.light thead tr {
+  background-color: #F8FAFC !important;
+}
+
+html.light tbody tr:hover {
+  background-color: #F1F5F9 !important;
+}
+
+html.light select,
+html.light input {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+}
+
+html.light select option {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
